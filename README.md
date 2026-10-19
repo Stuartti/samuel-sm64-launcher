@@ -19,6 +19,15 @@ O projeto foi empacotado em um único arquivo `.exe` utilizando o **PyInstaller*
 Se quiser clonar o projeto e gerar o executável na sua máquina:
 
 1. Clone o repositório:
-   ```bash
-   git clone [https://github.com/Stuartti/samuel-sm64-launcher.git](https://github.com/Stuartti/samuel-sm64-launcher.git)
-   cd samuel-sm64-launcher
+```bash
+git clone https://github.com/Stuartti/samuel-sm64-launcher.git
+cd samuel-sm64-launcher
+```
+
+2. Coloque os arquivos do Mupen64Plus e a ROM renomeada para `mario.z64` dentro da pasta `bin/`.
+
+3. Instale o PyInstaller e compile:
+```bash
+pip install pyinstaller
+pyinstaller --noconsole --onefile --add-data "bin;bin" run.py
+```
